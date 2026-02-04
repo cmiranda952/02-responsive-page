@@ -11,8 +11,29 @@ header {
   background: #333;
   color: #fff;
   padding: 16px;
-  text-align: center;
   font-family: 'Exo 2', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+  margin-top: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 h1, h2, h3 {
@@ -26,6 +47,8 @@ h1 {
 
 main {
   padding: 16px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 section {
@@ -120,6 +143,36 @@ a:hover {
 }
 
 .article img {
+  width: 100%;
+  height: auto;
+  display: block;
   margin-bottom: 20px;
   border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  nav {
+    gap: 16px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  #featured-article h2 {
+    font-size: 28px;
+  }
+
+  p {
+    margin: 12px 0;
+  }
 }
